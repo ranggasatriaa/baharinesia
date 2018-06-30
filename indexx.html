@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Universal - All In 1 Template</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="all,follow">
+  <script src="vendor/jquery/jquery.min.js"></script>
+</head>
+<body>
+
+  <div id="demo"></div>
+  <script>
+  $.ajax({
+    url: 'http://localhost/cashnote/show_cash_note.php',
+    dataType: 'json',
+    success: function(data) {
+      console.log(data);
+      var json_obj = $.parseJSON(data);//parse JSON
+      // $('#demo').html(json_obj[])
+      var output="<p>asdasd</p>";
+      // for (var i in json_obj)
+      // {
+      //   output+="<br>" + json_obj[i].id;
+      // }
+      // output+="</p>";
+
+      $('#demo').html("output");
+    },
+
+  });
+  // var received = JSON.data;
+  // var update = data.id;
+  //   $('#demo').append(update)
+
+  // .done(function(data){
+  //   $('#demo').append(JSON.data[1].id)
+  //   $('#demo').append(JSON.stringify(data))
+  // });
+
+  // var output = document.getElementById('demo');
+  // output.innerHTML = data.firstName;
+</script>
+<script>
+// $(document).ready(function(){
+//   $getJSON("http://localhost/cashnote/show_cash_note.php", function(data){
+//     $.each(data.data, function(){
+//       $("#demo").append(this['id']);
+//     });)
+//   })
+// })
+</script>
+<!-- Javascript files-->
+</body>
+</html>
